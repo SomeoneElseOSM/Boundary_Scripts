@@ -129,7 +129,7 @@ osmium tags-filter ${file_prefix1}_${file_extension1}.osm.pbf nwr/admin_level   
 # Filter place and waterway tags out with osmconvert/osmfilter/osmconvert
 #
 osmconvert ${file_prefix1}_${file_extension1}_admin.osm.pbf -o=${file_prefix1}_${file_extension1}_admin.o5m
-osmfilter ${file_prefix1}_${file_extension1}_admin.o5m --drop-tags="place= waterway=" -o=${file_prefix1}_${file_extension1}_admin_noplace.o5m
+osmfilter ${file_prefix1}_${file_extension1}_admin.o5m --drop-tags="barrier= building= highway= landuse= office= place= waterway=" -o=${file_prefix1}_${file_extension1}_admin_noplace.o5m
 osmconvert ${file_prefix1}_${file_extension1}_admin_noplace.o5m -o=${file_prefix1}_${file_extension1}_admin_noplace.osm.pbf
 #
 chmod 755 ${file_prefix1}_${file_extension1}_admin_noplace.osm.pbf
