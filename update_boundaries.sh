@@ -101,12 +101,19 @@ rm local_user_crontab_new.$$
 # How much disk space are we currently using?
 #
 df
+cd /home/${local_user}/data
 #
 # When was the first target file last modified?
 #
-cd /home/${local_user}/data
-wget $file_page1 -O file_page1.$$
-grep " and contains all OSM data up to " file_page1.$$ | sed "s/.*and contains all OSM data up to //" | sed "s/. File size.*//" > last_modified1.$$
+if [ "$1" = "current" ]
+then
+    echo "Using current data"
+    ls -t | grep "${file_prefix1}_" | head -1 | sed "s/${file_prefix1}_//" | sed "s/.osm.pbf//" > last_modified1.$$
+else
+    wget $file_page1 -O file_page1.$$
+    grep " and contains all OSM data up to " file_page1.$$ | sed "s/.*and contains all OSM data up to //" | sed "s/. File size.*//" > last_modified1.$$
+    rm file_page1.$$
+fi
 #
 file_extension1=`cat last_modified1.$$`
 #
@@ -159,6 +166,6 @@ crontab -u $local_user local_user_crontab_safe.$$
 # And final tidying up
 #
 #date | mail -s "Boundary database reload complete on `hostname`" ${local_user}
-rm file_page1.$$ last_modified1.$$ 
+rm last_modified1.$$ 
 rm update_boundaries.running
 #
