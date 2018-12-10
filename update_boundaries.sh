@@ -27,6 +27,7 @@ file_url1=http://download.geofabrik.de/${file_prefix1}-latest.osm.pbf
 #
 #file_prefix1=british-isles
 #file_prefix1=great-britain
+#file_prefix1=ukraine
 #file_page1=http://download.geofabrik.de/europe/${file_prefix1}.html
 #file_url1=http://download.geofabrik.de/europe/${file_prefix1}-latest.osm.pbf
 #
