@@ -54,10 +54,10 @@ fi
 #file_url1=http://download.geofabrik.de/${file_prefix1}-latest.osm.pbf
 #
 #file_prefix1=british-isles
-#file_prefix1=great-britain
+file_prefix1=great-britain
 #file_prefix1=ireland-and-northern-ireland
-#file_page1=http://download.geofabrik.de/europe/${file_prefix1}.html
-#file_url1=http://download.geofabrik.de/europe/${file_prefix1}-latest.osm.pbf
+file_page1=http://download.geofabrik.de/europe/${file_prefix1}.html
+file_url1=http://download.geofabrik.de/europe/${file_prefix1}-latest.osm.pbf
 #
 #file_prefix1=england
 #file_prefix1=scotland
@@ -109,18 +109,18 @@ fi
 #file_prefix1=warwickshire
 #file_prefix1=west-midlands
 #file_prefix1=west-sussex
-file_prefix1=west-yorkshire
+#file_prefix1=west-yorkshire
 #file_prefix1=wiltshire
 #file_prefix1=worcestershire
-file_page1=http://download.geofabrik.de/europe/great-britain/england/${file_prefix1}.html
-file_url1=http://download.geofabrik.de/europe/great-britain/england/${file_prefix1}-latest.osm.pbf
+#file_page1=http://download.geofabrik.de/europe/great-britain/england/${file_prefix1}.html
+#file_url1=http://download.geofabrik.de/europe/great-britain/england/${file_prefix1}-latest.osm.pbf
 #
-# We create 1 new XML files
-# The boundaries layer reads from gis6, and uses the openstreetmap-carto style, not openstreetmap-carto-AJT
+# We create 1 new XML file
+# The boundaries layer reads from gis6, and uses the openstreetmap-carto-AJT style
 #
 cd /home/${local_filesystem_user}/src/openstreetmap-carto-AJT
 pwd
-sed "s/\[gis\]/[gis6]/" mapnik.xml > mapnik6.xml
+carto project6.mml > mapnik6.xml
 #
 # How much disk space are we currently using?
 #
