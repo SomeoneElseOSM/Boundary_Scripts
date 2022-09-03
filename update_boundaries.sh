@@ -176,7 +176,7 @@ chmod 755 ${file_prefix1}_${file_extension1}_admin_noplace.osm.pbf
 #
 # Run osm2pgsql, loading the "gis6" database.
 #
-if sudo -u ${local_renderd_user} osm2pgsql --create --slim -G --hstore -d ${local_database} -C 2500 --number-processes 2 -S /home/${local_filesystem_user}/src/openstreetmap-carto-AJT/openstreetmap-carto.style --multi-geometry --tag-transform-script /home/${local_filesystem_user}/src/openstreetmap-carto/openstreetmap-carto.lua ${file_prefix1}_${file_extension1}_admin_noplace.osm.pbf
+if sudo -u ${local_renderd_user} osm2pgsql --create --slim -G --hstore -d ${local_database} -C 2500 --number-processes 2 -S /home/${local_filesystem_user}/src/openstreetmap-carto-AJT/openstreetmap-carto.style --multi-geometry --tag-transform-script /home/${local_filesystem_user}/src/openstreetmap-carto-AJT/openstreetmap-carto.lua ${file_prefix1}_${file_extension1}_admin_noplace.osm.pbf
 then
     echo Database ${local_database} load OK
 else
