@@ -14,7 +14,7 @@ final_tidy_up()
 {
     rm last_modified1.$$
     rm update_boundaries.running
-#   rm ${file_prefix1}_${file_extension1}_admin.osm.pbf ${file_prefix1}_${file_extension1}_admin_noplace.osm.pbf
+    rm ${file_prefix1}_${file_extension1}_admin.osm.pbf ${file_prefix1}_${file_extension1}_admin_noplace.osm.pbf
 }
 
 m_error_01()
