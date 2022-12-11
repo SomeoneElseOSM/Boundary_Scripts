@@ -53,11 +53,11 @@ fi
 #file_page1=http://download.geofabrik.de/${file_prefix1}.html
 #file_url1=http://download.geofabrik.de/${file_prefix1}-latest.osm.pbf
 #
-file_prefix1=britain-and-ireland
+#file_prefix1=britain-and-ireland
 #file_prefix1=great-britain
 #file_prefix1=ireland-and-northern-ireland
-file_page1=http://download.geofabrik.de/europe/${file_prefix1}.html
-file_url1=http://download.geofabrik.de/europe/${file_prefix1}-latest.osm.pbf
+#file_page1=http://download.geofabrik.de/europe/${file_prefix1}.html
+#file_url1=http://download.geofabrik.de/europe/${file_prefix1}-latest.osm.pbf
 #
 #file_prefix1=england
 #file_prefix1=scotland
@@ -93,7 +93,7 @@ file_url1=http://download.geofabrik.de/europe/${file_prefix1}-latest.osm.pbf
 #file_prefix1=lincolnshire
 #file_prefix1=merseyside
 #file_prefix1=norfolk
-#file_prefix1=north-yorkshire
+file_prefix1=north-yorkshire
 #file_prefix1=northamptonshire
 #file_prefix1=northumberland
 #file_prefix1=nottinghamshire
@@ -112,8 +112,8 @@ file_url1=http://download.geofabrik.de/europe/${file_prefix1}-latest.osm.pbf
 #file_prefix1=west-yorkshire
 #file_prefix1=wiltshire
 #file_prefix1=worcestershire
-#file_page1=http://download.geofabrik.de/europe/great-britain/england/${file_prefix1}.html
-#file_url1=http://download.geofabrik.de/europe/great-britain/england/${file_prefix1}-latest.osm.pbf
+file_page1=http://download.geofabrik.de/europe/great-britain/england/${file_prefix1}.html
+file_url1=http://download.geofabrik.de/europe/great-britain/england/${file_prefix1}-latest.osm.pbf
 #
 # We create 1 new XML file
 # The boundaries layer reads from gis6, and uses the openstreetmap-carto-AJT style
