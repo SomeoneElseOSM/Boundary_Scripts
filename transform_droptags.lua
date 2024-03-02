@@ -1,7 +1,7 @@
 --
 -- Remove tags from boundary ways that we are not interested in.
 --
--- Copyright (C) 2022-2023  Andy Townsend
+-- Copyright (C) 2022-2024  Andy Townsend
 --
 -- This program is free software: you can redistribute it and/or modify
 -- it under the terms of the GNU General Public License as published by
